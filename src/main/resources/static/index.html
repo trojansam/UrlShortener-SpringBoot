@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URL Shortener</title>
+  <style>
+    #cover{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    fieldset{
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="cover">
+    <h1>URL Shortener</h1>
+    <div id="wrap">
+      <form action="api/shorturl" method="post">
+        <fieldset>
+          <label for="url">URL: </label>
+          <input type="text" id="url" placeholder="https://www.google.co.in" name="original_url">
+          <input type="submit" value="Submit">
+        </fieldset>
+
+      </form>
+    </div>
+    <h3>Example Usage:</h3>
+    <a href="/shorturl/1" target="_blank" rel="noreferrer">[project-url]/shorturl/1</a>
+    <p>Will redirect to https://www.google.co.in</p>
+
+  </div>
+</body>
+</html>
